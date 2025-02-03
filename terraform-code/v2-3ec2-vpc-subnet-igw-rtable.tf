@@ -11,7 +11,7 @@ resource "aws_instance" "demo-server" {
   subnet_id = aws_subnet.demo_sg-Subnet-01.id
   for_each = toset(["Jenkins-master", "Jenkins-slave", "Ansible"])
   tags = {
-  name     = each.key
+    name = "${each.key}"
 
 }
 }
@@ -63,7 +63,7 @@ resource "aws_subnet" "demo_sg-Subnet-01" {
 
 resource "aws_subnet" "demo_sg-Subnet-02" {
   vpc_id     = aws_vpc.demo_sg-vpc.id
-  cidr_block = "10.0.1.0/24"
+  cidr_block = "10.0.2.0/24"
   map_public_ip_on_launch = "true"
   availability_zone = "eu-west-2b"
 
