@@ -5,12 +5,12 @@ pipeline {
         }
     }
 
-    environment {
-        PATH = "/opt/maven/bin:$PATH"   
+environment {
+    PATH = "/opt/maven/bin/:$PATH"   
     }
 
     stages {
-        stage('Build') {
+        stage("Build") {
             steps {
                 sh 'mvn clean deploy'
             }
