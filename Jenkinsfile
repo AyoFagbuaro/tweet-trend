@@ -6,7 +6,7 @@ pipeline {
     }
 
     environment {
-        PATH = "$MAVEN_HOME/bin:$PATH"   
+        PATH = "/opt/maven/bin:$PATH"   
     }
 
     stages {
