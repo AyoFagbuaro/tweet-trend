@@ -1,8 +1,12 @@
 pipeline {
     agent {
         node{
-            label 'maven-slave'
+            label 'maven'
         }
+    }
+
+    environment {
+        PATH = "$MAVEN_HOME/bin:$PATH"   
     }
 
     stages {
