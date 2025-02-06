@@ -1,13 +1,15 @@
 [jenkins-master]
-10.0.1.73
+ 10.1.1.178
+ 
+ [jenkins-master:vars]
+ ansible_user=ubuntu
+ ansible_ssh_private_key_file=/opt/oyin.pem
 
-[jenkins-master:vars]
-ansible_user=ubuntu
-ansible_ssh_private_key_file=/opt/oyin.pem
 
-[jenkins-slave]
-10.0.1.15
 
-[jenkins-slave:vars]
-ansible_user=ubuntu
-ansible_ssh_private_key_file=/opt/oyin.pem
+ [jenkins-slave]
+ 10.1.1.83
+
+ [jenkins-slave:vars]
+ ansible_user=ubuntu
+ ansible_ssh_private_key_file=/opt/oyin.pem
