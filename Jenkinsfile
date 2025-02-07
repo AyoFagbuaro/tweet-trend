@@ -15,7 +15,7 @@ pipeline {
                 sh 'mvn clean deploy'
             }
         }
-        stage("SonarQube analysis") {
+        stage("SonarQube analysiis") {
             environment {
                 scannerHome = tool 'valaxxy-sonarqube-server';
             }
