@@ -12,9 +12,21 @@ pipeline {
     stages {
         stage("Build") {
             steps {
-                sh 'mvn clean deploy'
+                echo '-----Building started-----'
+                sh 'mvn clean deploy -Dmaven.test.skip=true'
+                echo '-----Building completed-----'
             }
         }
+
+        stage ("test") {
+            steps {
+                echo '-----Unit testing started-----'
+                sh 'mvn surefire-report:report'
+                echo '-----Unit testing completed-----'
+            }
+        }
+
+
         stage("SonarQube analysiis") {
             environment {
                 scannerHome = tool 'valaxxy-sonarqube-server';
