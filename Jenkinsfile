@@ -29,7 +29,7 @@ pipeline {
 
         stage("SonarQube-analysiis") {
             environment {
-                scannerHome = tool 'valaxxy-sonarqube-server';
+                scannerHome = tool 'valaxxy-sonar-scanner';
             }
             steps {
                 withSonarQubeEnv('valaxxy-sonarqube-server') {
