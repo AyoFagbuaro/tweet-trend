@@ -27,7 +27,7 @@ pipeline {
         }
 
 
-        stage("SonarQube analysiis") {
+        stage("SonarQube analysiiis") {
             environment {
                 scannerHome = tool 'valaxxy-sonarqube-server';
             }
