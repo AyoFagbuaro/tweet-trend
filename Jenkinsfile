@@ -90,7 +90,7 @@ pipeline {
             }
         }
 
-        stage (" Docker Publishing "){
+        stage (" Docker Publish "){
             steps {
                 script {
                     echo '<--------------- Docker Publish Started --------------->'  
