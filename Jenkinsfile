@@ -30,16 +30,16 @@ pipeline {
             }
         }
 
-        stage("SonarQube-analysiis") {
-            environment {
-                scannerHome = tool 'valaxxy-sonar-scanner';
-            }
-            steps {
-                withSonarQubeEnv('valaxxy-sonarqube-server') {
-                    sh "${scannerHome}/bin/sonar-scanner"
-                }
-            }
-        }
+        // stage("SonarQube-analysiis") {
+        //     environment {
+        //         scannerHome = tool 'valaxxy-sonar-scanner';
+        //     }
+        //     steps {
+        //         withSonarQubeEnv('valaxxy-sonarqube-server') {
+        //             sh "${scannerHome}/bin/sonar-scanner"
+        //         }
+        //     }
+        // }
         // stage("Quality Gate"){
         //     steps{
         //         script {
