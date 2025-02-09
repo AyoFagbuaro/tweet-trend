@@ -1,4 +1,4 @@
 FROM openjdk:17
-ADD jarstaging/com/valaxy/demo-workshop/2.1.2.jar ttrend.jar
+ADD jarstaging/com/valaxy/demo-workshop/2.1.2 ttrend.jar
 ENTRYPOINT [ "java", "-jar", "ttrend.jar" ]
 
